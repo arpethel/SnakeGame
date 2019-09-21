@@ -1,0 +1,24 @@
+----------------------------
+--Snake Game README---------
+----------------------------
+
+
+Snake Game requires Node.js and express
+
+
+To install Node.js please visit:
+  - https://nodejs.org/en/
+
+
+To install express & path using npm:
+  - Navigate to the root directory that contains package.json and index.js (ie: */Snake)
+  - Run the following command:
+	npm install express --save
+
+
+To run Snake Game using Node.js:
+  - Navigate to the root directory that contains package.json and index.js (ie: */Snake)
+  - Run the following command:
+	node index.js
+  - Open a web browser and navigate to: http://localhost:3000
+

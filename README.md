@@ -22,7 +22,7 @@ Inspired by Nokia's infamous Snake game
     • A score variable displays the number of objects consumed by the snake
     • The snake must die if it hits the border or runs into itself which sets the game state to “upload”
     • If the game is in a state of “upload” then a stub method should be called to upload the score variable to a database*
-*See [Integrating Azure Cosmos DB into Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb?tabs=csharp) for more information on how to save the score on the Azure cloud
+*See [Integrating Azure Cosmos DB into Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb?tabs=csharp) for more information on how to persist data on the Azure cloud
 
 
 ### Snake Game Class Diagram

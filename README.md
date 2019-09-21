@@ -22,7 +22,7 @@ Inspired by Nokia's infamous Snake game
     • A score variable displays the number of objects consumed by the snake
     • The snake must die if it hits the border or runs into itself which sets the game state to “upload”
     • If the game is in a state of “upload” then a stub method should be called to upload the score variable to a database*
-*Using Azure Storage & Functions: https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-table
+*See [Azure Table Storage & Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-table)
 
 
 ### Snake Game Class Diagram

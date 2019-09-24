@@ -8,51 +8,7 @@
 		<script src="App.js" type="module"></script>
 		<title>Snake Game</title>
 	</head>
-	<style>
-		.roundedOne {
-			width: 28px;
-			height: 28px;
-			position: relative;
-			margin: 20px auto;
-			background: #fcfff4;
-			background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-			border-radius: 50px;
-			box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-		}
-		.roundedOne label {
-			width: 20px;
-			height: 20px;
-			cursor: pointer;
-			position: absolute;
-			left: 4px;
-			top: 4px;
-			background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
-			border-radius: 50px;
-			box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
-		}
-		.roundedOne label:after {
-			content: '';
-			width: 16px;
-			height: 16px;
-			position: absolute;
-			top: 2px;
-			left: 2px;
-			background: #27ae60;
-			background: linear-gradient(to bottom, #27ae60 0%, #145b32 100%);
-			opacity: 0;
-			border-radius: 50px;
-			box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-		}
-		.roundedOne label:hover::after {
-			opacity: 0.3;
-		}
-		.roundedOne input[type=checkbox] {
-			visibility: hidden;
-		}
-		.roundedOne input[type=checkbox]:checked + label:after {
-			opacity: 1;
-		}
-	</style>
+	
 	<body class="container text-white" style="background-color: #9AC503">
 		<div class="row" style="margin-top: 3em">
 			<div class="col" style="margin-top: 6em">
@@ -78,18 +34,11 @@
 					<img src="SnakeLogo2.svg" />
 				</div>
 				
-				<!-- <h1 class="text-center">Snake Game</h1> -->
-				
 				<h5 class="text-center"><code style="background-color: white; border-radius: 5px; padding: 0.5em">N</code> to play, <code style="background-color: white; border-radius: 5px; padding: 0.5em">Spacebar</code> to pause</h5>
 				
 				<div class="shadow p-1 mb-5 rounded bg-dark" style="margin-top: 3em" id="gameContainer">
 					<canvas id="gameCanvas" width="500" height="300" style="border:1px solid #9AC503; background-color: #C4C4C4"></canvas>
 				</div>
-				
-				<!-- <div class="roundedOne">
-					<input type="checkbox" value="None" id="roundedOne" name="check" checked />
-					<label for="roundedOne"></label>
-				</div> -->
 			</div>
 			<div class="col"></div>
 		</div>

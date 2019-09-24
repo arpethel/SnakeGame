@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "snake game",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.2.3",
     "express": "^4.17.1",
     "path": "^0.12.7"
   }

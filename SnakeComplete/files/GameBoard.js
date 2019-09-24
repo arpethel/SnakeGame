@@ -7,8 +7,8 @@ export default class GameBoard {
 		this.canvasContext = canvas.getContext('2d');
 		this.boardHeight = canvas.height;
 		this.boardWidth = canvas.width;
-		this.snake = new Snake(canvas.width/2,canvas.height/2,5,5,"#0000FF",1,0);
-		this.targetObject = this.CreateTarget(5,5,"#000000");
+		this.snake = new Snake(canvas.width / 2, canvas.height / 2, 5, 5,"#000000",1,0);
+		this.targetObject = this.CreateTarget(5, 5,"#EF1111");
 		this.gameState = "stop";
 		this.score = 0;
 	}
@@ -17,7 +17,7 @@ export default class GameBoard {
 		this.snake.UpdateSnake();
 		if(this.CheckSnakeCollision(this.targetObject.x,this.targetObject.y)) {
 			this.score++;
-			this.targetObject = this.CreateTarget(5,5,"#000000");
+			this.targetObject = this.CreateTarget(5, 5,"#EF1111");
 		}
 		else {
 			this.snake.snakeCells.shift();

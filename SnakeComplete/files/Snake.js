@@ -3,6 +3,7 @@ export default class Snake {
 	constructor(x,y,width,height,color,xVel,yVel) {
 		this.snakeCells = [new GameObject(x,y,width,height,color)];
 		this.velocity = [xVel,yVel];
+		this.snakeCells.push(new GameObject(x-width, y, width, height, color));
 	}
 
 	UpdateSnake() {

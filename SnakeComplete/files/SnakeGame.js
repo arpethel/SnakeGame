@@ -1,6 +1,6 @@
 import GameBoard from '/GameBoard.js';
 
-let buttonPressed = {"LEFT" : false, "UP" : false, "RIGHT" : false, "DOWN" : false, "N" : false, "P" : false};
+let buttonPressed = {"LEFT" : false, "UP" : false, "RIGHT" : false, "DOWN" : false, "N" : false, "SPACE" : false};
 
 export default class SnakeGame {
 	constructor(canvas) {
@@ -15,7 +15,7 @@ export default class SnakeGame {
 			if(e.keyCode == 39) buttonPressed.RIGHT = true;
 			if(e.keyCode == 40) buttonPressed.DOWN = true;
 			if(e.keyCode == 78) buttonPressed.N = true;
-			if(e.keyCode == 80) buttonPressed.P = true;
+			if(e.keyCode == 32) buttonPressed.SPACE = true;
 		}
 
 		document.onkeyup = function(e) {
@@ -24,13 +24,13 @@ export default class SnakeGame {
 			if(e.keyCode == 39) buttonPressed.RIGHT = false;
 			if(e.keyCode == 40) buttonPressed.DOWN = false;
 			if(e.keyCode == 78) buttonPressed.N = false;
-			if(e.keyCode == 80) buttonPressed.P = false;
+			if(e.keyCode == 32) buttonPressed.SPACE = false;
 		}
 	}
 
 	UpdateBoard() {
 		this.KeyPressedHandler();
-		if(this.board.gameState == "play")
+		if(this.board.gameState == "playing")
 		{
 			this.board.DrawBoard();
 		}
@@ -106,16 +106,16 @@ export default class SnakeGame {
 		if(buttonPressed.N)
 		{
 			this.board = new GameBoard(this.board.canvas);
-			this.board.gameState = "play";
+			this.board.gameState = "playing";
 			buttonPressed.N = false;
 		}
-		if(buttonPressed.P)
+		if(buttonPressed.SPACE)
 		{
-			if(this.board.gameState == "play")
-				this.board.gameState = "pause";
-			else if(this.board.gameState == "pause")
-				this.board.gameState = "play";
-			buttonPressed.P = false;
+			if(this.board.gameState == "playing")
+				this.board.gameState = "paused";
+			else if(this.board.gameState == "paused")
+				this.board.gameState = "playing";
+			buttonPressed.SPACE = false;
 		}
 	}
 
